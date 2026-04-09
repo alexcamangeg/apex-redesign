@@ -40,9 +40,6 @@ export function WhoWeWorkWith() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-20">
           <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Who We Work With</h2>
-          <h3 className="text-3xl md:text-5xl font-serif text-foreground mb-5 md:mb-6 leading-tight">
-            Built for service businesses that depend on consistent lead flow.
-          </h3>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             We work with service-based businesses that rely on predictable lead generation—not inconsistent marketing.
           </p>

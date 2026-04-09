@@ -30,8 +30,8 @@ export function Hero() {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.1] mb-6 md:mb-8">
               We Help Service-Based Businesses{" "}
-              <span className="text-primary italic">Generate More Qualified Leads</span>{" "}
-              Consistently
+              <span className="text-primary italic">Generate More Qualified Leads</span>
+              {" "}Consistently
             </h1>
 
             <p className="text-base md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-lg leading-relaxed">

@@ -92,11 +92,11 @@ export function Services() {
               <p className="text-muted-foreground text-sm leading-relaxed mb-5 md:mb-6">
                 {service.description}
               </p>
-              <ul className="space-y-3 mt-auto">
+              <ul className="flex flex-col gap-3 mt-auto">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80 leading-relaxed">
+                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    <span>{feature}</span>
+                    <span className="block leading-snug">{feature}</span>
                   </li>
                 ))}
               </ul>

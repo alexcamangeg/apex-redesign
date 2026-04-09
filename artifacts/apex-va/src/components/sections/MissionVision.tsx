@@ -6,9 +6,6 @@ export function MissionVision() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Who We Are</h2>
-          <h3 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-            Built with purpose. Driven by results.
-          </h3>
           <p className="text-lg text-muted-foreground">
             We build systems that solve inconsistent lead flow and operational inefficiencies.
           </p>
