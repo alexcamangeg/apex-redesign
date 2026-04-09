@@ -20,7 +20,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-20 w-auto mb-6" style={{ mixBlendMode: "screen" }} />
             <p className="max-w-sm text-lg" style={{ color: textMuted }}>
-              Premium virtual assistance for busy entrepreneurs, startups, and professionals who want to reclaim their time.
+              Lead generation systems, high-converting websites, and performance-driven support for service businesses.
             </p>
           </div>
 

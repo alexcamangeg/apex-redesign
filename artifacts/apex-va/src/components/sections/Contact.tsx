@@ -66,9 +66,9 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-background relative">
+    <section id="contact" className="py-16 md:py-28 bg-background relative">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -76,38 +76,36 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Let's discuss your specific needs.</h2>
-            <p className="text-lg text-muted-foreground mb-4 max-w-md">
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-5 md:mb-6 leading-tight">Let's discuss your specific needs.</h2>
+            <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 max-w-md leading-relaxed">
               Tell us about your business and we'll show you where you're losing opportunities.
             </p>
-            <p className="text-base text-muted-foreground mb-12 max-w-md">
+            <p className="text-sm md:text-base text-muted-foreground mb-10 md:mb-12 max-w-md leading-relaxed">
               Fill out the form to book your call. We'll respond within 24 hours to find a time that works for you.
             </p>
             
-            <div className="space-y-8">
-              <div>
-                <h4 className="font-serif text-xl text-foreground mb-2">The Process</h4>
-                <div className="space-y-4 mt-4">
-                  <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif flex-shrink-0">1</div>
-                    <div>
-                      <p className="font-medium text-foreground">Discovery Call</p>
-                      <p className="text-sm text-muted-foreground">We discuss your bottlenecks and goals.</p>
-                    </div>
+            <div>
+              <h4 className="font-serif text-xl text-foreground mb-5">The Process</h4>
+              <div className="space-y-5">
+                <div className="flex gap-4 items-start">
+                  <div className="w-9 h-9 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif flex-shrink-0 text-sm">1</div>
+                  <div className="pt-1">
+                    <p className="font-medium text-foreground">Discovery Call</p>
+                    <p className="text-sm text-muted-foreground mt-1">We discuss your bottlenecks and goals.</p>
                   </div>
-                  <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif flex-shrink-0">2</div>
-                    <div>
-                      <p className="font-medium text-foreground">Custom Proposal</p>
-                      <p className="text-sm text-muted-foreground">A tailored plan of hours and services.</p>
-                    </div>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <div className="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif flex-shrink-0 text-sm">2</div>
+                  <div className="pt-1">
+                    <p className="font-medium text-foreground">Custom Proposal</p>
+                    <p className="text-sm text-muted-foreground mt-1">A tailored plan of hours and services.</p>
                   </div>
-                  <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif flex-shrink-0">3</div>
-                    <div>
-                      <p className="font-medium text-foreground">Onboarding</p>
-                      <p className="text-sm text-muted-foreground">Seamless transition and immediate impact.</p>
-                    </div>
+                </div>
+                <div className="flex gap-4 items-start">
+                  <div className="w-9 h-9 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif flex-shrink-0 text-sm">3</div>
+                  <div className="pt-1">
+                    <p className="font-medium text-foreground">Onboarding</p>
+                    <p className="text-sm text-muted-foreground mt-1">Seamless transition and immediate impact.</p>
                   </div>
                 </div>
               </div>
@@ -119,20 +117,20 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-card p-8 md:p-10 border border-border shadow-xl relative"
+            className="bg-card p-6 md:p-10 border border-border shadow-xl"
           >
             {isSubmitted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center py-16 animate-in fade-in zoom-in duration-500">
+              <div className="h-full flex flex-col items-center justify-center text-center py-12 md:py-16 animate-in fade-in zoom-in duration-500">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 size={32} />
                 </div>
                 <h3 className="text-2xl font-serif text-foreground mb-4">Request Received</h3>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground mb-8 leading-relaxed">
                   Thank you for reaching out. A member of our team will contact you within 24 hours to schedule your discovery call.
                 </p>
                 <Button 
                   variant="outline" 
-                  className="rounded-none"
+                  className="rounded-none w-full sm:w-auto"
                   onClick={() => {
                     setIsSubmitted(false);
                     form.reset();
@@ -144,16 +142,16 @@ export function Contact() {
               </div>
             ) : (
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <FormField
                       control={form.control}
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Full Name</FormLabel>
+                          <FormLabel className="text-foreground text-sm font-medium">Full Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Jane Doe" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-name" />
+                            <Input placeholder="Jane Doe" className="rounded-none border-border bg-background h-12 focus-visible:ring-primary" {...field} data-testid="input-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -164,9 +162,9 @@ export function Contact() {
                       name="businessName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Business Name</FormLabel>
+                          <FormLabel className="text-foreground text-sm font-medium">Business Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Acme Roofing Co." className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-business-name" />
+                            <Input placeholder="Acme Roofing Co." className="rounded-none border-border bg-background h-12 focus-visible:ring-primary" {...field} data-testid="input-business-name" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -174,15 +172,15 @@ export function Contact() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <FormField
                       control={form.control}
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Email Address</FormLabel>
+                          <FormLabel className="text-foreground text-sm font-medium">Email Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="jane@company.com" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-email" />
+                            <Input placeholder="jane@company.com" className="rounded-none border-border bg-background h-12 focus-visible:ring-primary" {...field} data-testid="input-email" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -193,9 +191,11 @@ export function Contact() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-foreground">Phone Number <span className="text-muted-foreground font-normal">(Optional)</span></FormLabel>
+                          <FormLabel className="text-foreground text-sm font-medium">
+                            Phone <span className="text-muted-foreground font-normal">(Optional)</span>
+                          </FormLabel>
                           <FormControl>
-                            <Input placeholder="+1 (555) 000-0000" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-phone" />
+                            <Input placeholder="+1 (555) 000-0000" className="rounded-none border-border bg-background h-12 focus-visible:ring-primary" {...field} data-testid="input-phone" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -208,9 +208,9 @@ export function Contact() {
                     name="serviceNeeded"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground">Service Needed</FormLabel>
+                        <FormLabel className="text-foreground text-sm font-medium">Service Needed</FormLabel>
                         <FormControl>
-                          <Input placeholder="e.g. Lead Generation, Website, VA Support" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-service-needed" />
+                          <Input placeholder="e.g. Lead Generation, Website, VA Support" className="rounded-none border-border bg-background h-12 focus-visible:ring-primary" {...field} data-testid="input-service-needed" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -222,11 +222,11 @@ export function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground">Tell us about your business</FormLabel>
+                        <FormLabel className="text-foreground text-sm font-medium">Tell us about your business</FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder="Describe your current situation and where you need support..." 
-                            className="rounded-none border-border bg-background min-h-[120px] focus-visible:ring-primary resize-y" 
+                            className="rounded-none border-border bg-background min-h-[130px] focus-visible:ring-primary resize-y" 
                             {...field} 
                             data-testid="input-message"
                           />
@@ -239,7 +239,7 @@ export function Contact() {
                   {submitError && (
                     <p className="text-sm text-red-500 text-center">{submitError}</p>
                   )}
-                  <Button type="submit" disabled={isSubmitting} className="w-full rounded-none h-12 text-base" data-testid="button-submit-form">
+                  <Button type="submit" disabled={isSubmitting} className="w-full rounded-none h-12 md:h-14 text-base" data-testid="button-submit-form">
                     {isSubmitting ? "Sending..." : "Book Your Call"}
                   </Button>
                 </form>

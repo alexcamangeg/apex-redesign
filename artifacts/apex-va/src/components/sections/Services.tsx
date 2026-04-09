@@ -58,20 +58,20 @@ export function Services() {
   };
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-muted/20">
+    <section id="services" className="py-16 md:py-28 bg-muted/20">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-20">
           <h2 className="text-sm font-medium text-primary uppercase tracking-wider mb-4">Services</h2>
-          <h3 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
+          <h3 className="text-3xl md:text-5xl font-serif text-foreground mb-5 md:mb-6 leading-tight">
             Solutions built to generate consistent opportunities and improve how your business operates.
           </h3>
         </div>
 
         {/* Service Cards */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -81,22 +81,22 @@ export function Services() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-card border border-border p-8 flex flex-col group hover:border-primary/40 transition-colors"
+              className="bg-card border border-border p-6 md:p-8 flex flex-col group hover:border-primary/40 transition-colors"
             >
-              <div className="text-primary mb-6 group-hover:scale-110 transition-transform origin-left">
+              <div className="text-primary mb-5 group-hover:scale-110 transition-transform origin-left">
                 {service.icon}
               </div>
-              <h4 className="text-2xl font-serif font-medium text-foreground mb-4">
+              <h4 className="text-xl md:text-2xl font-serif font-medium text-foreground mb-3 md:mb-4">
                 {service.title}
               </h4>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5 md:mb-6">
                 {service.description}
               </p>
               <ul className="space-y-3 mt-auto">
                 {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <li key={i} className="flex items-start gap-3 text-sm text-foreground/80 leading-relaxed">
                     <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    {feature}
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -110,18 +110,18 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto bg-card border border-border p-10 md:p-14"
+          className="max-w-4xl mx-auto bg-card border border-border p-7 md:p-14"
         >
-          <div className="flex flex-col md:flex-row gap-10 items-start">
-            <div className="flex-1">
+          <div className="flex flex-col gap-8 md:gap-10">
+            <div>
               <div className="text-primary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-3">
                 <div className="w-8 h-px bg-primary" />
                 How It All Works Together
               </div>
-              <h4 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+              <h4 className="text-2xl md:text-4xl font-serif text-foreground mb-4 leading-snug">
                 Most businesses struggle because their systems are disconnected.
               </h4>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
                 We combine your website, outreach, and support into one structured system designed
                 to generate and capture opportunities consistently.
               </p>
@@ -129,10 +129,10 @@ export function Services() {
                 This isn't just a service—it's a complete growth system.
               </p>
             </div>
-            <div className="flex-shrink-0 w-full md:w-auto flex md:items-start md:pt-12">
+            <div>
               <Button
                 size="lg"
-                className="rounded-none h-14 px-10 text-base group w-full md:w-auto"
+                className="rounded-none h-12 md:h-14 px-10 text-base group w-full sm:w-auto"
                 onClick={() => scrollToSection("contact")}
                 data-testid="button-services-cta"
               >

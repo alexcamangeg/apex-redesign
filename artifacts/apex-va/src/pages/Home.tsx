@@ -16,8 +16,8 @@ export default function Home() {
       <main>
         <Hero />
         <WhoWeWorkWith />
-        <Services />
         <HowItWorks />
+        <Services />
         <MissionVision />
         <MidCTA />
         <Contact />

@@ -1,0 +1,148 @@
+1. HERO SECTION (FINAL VERSION)
+
+Make sure there are NO spacing issues and it displays clean on both desktop and mobile.
+
+Use this copy exactly:
+
+LEAD GENERATION · WEBSITES · VA SUPPORT
+
+We Help Service-Based Businesses Generate More Qualified Leads Consistently
+
+Through high-converting websites and outbound systems designed to bring real opportunities—not just traffic.
+
+Primary CTA: Book a Call  
+Secondary CTA: Learn More  
+
+Add this line under the buttons:
+Built for businesses that rely on consistent lead flow—not guesswork.
+
+Important:
+- Fix any text wrapping issues (no words merging)
+- Ensure proper spacing between lines on mobile
+
+---
+
+2. SECTION ORDER (IMPORTANT CHANGE)
+
+Reorder the homepage to:
+
+1. Hero  
+2. Who We Work With  
+3. How It Works  
+4. Services  
+5. Who We Are  
+6. Final CTA / Form  
+
+---
+
+3. WHO WE WORK WITH (KEEP, MINOR CLEANUP)
+
+Keep the section but ensure spacing is clean and readable on mobile.
+
+Intro text:
+
+We work with service-based businesses that rely on predictable lead generation—not inconsistent marketing.
+
+---
+
+4. HOW IT WORKS (UPDATE INTRO)
+
+Use this exact intro:
+
+A simple system designed to identify gaps, build structure, and generate consistent opportunities.
+
+Make sure:
+- Each step is clearly separated
+- Spacing between steps is consistent
+- Mobile readability is clean
+
+---
+
+5. SERVICES SECTION (FORMAT FIX)
+
+Each service should be displayed as a clean block/card with proper spacing.
+
+Use this exact formatting:
+
+Lead Generation Systems  
+We build outbound and follow-up systems designed to create a steady flow of qualified opportunities.
+
+- Targeted outreach strategies  
+- Lead capture and follow-up structure  
+- Appointment-setting support  
+- Consistent pipeline development  
+
+High-Converting Websites  
+Your website should convert visitors into real opportunities—not just exist online.
+
+- Conversion-focused design  
+- Clear messaging and structure  
+- Mobile-optimized experience  
+- Integrated lead capture forms  
+
+Virtual Assistant Support  
+Execution is where most businesses fall short. We provide trained support to help you stay consistent.
+
+- Outbound calling and follow-up  
+- Lead management and organization  
+- CRM updates and tracking  
+- Administrative support  
+
+Important:
+- Each bullet must be on its own line
+- Add spacing between bullets
+- Ensure mobile layout is not compressed
+
+---
+
+6. REMOVE GENERIC FOOTER TEXT
+
+Remove:
+“Premium virtual assistance for busy entrepreneurs…”
+
+Replace with:
+
+Lead generation systems, high-converting websites, and performance-driven support for service businesses.
+
+---
+
+7. FORM SECTION (FINAL COPY)
+
+Above the form, use:
+
+Tell us about your business and we’ll show you where you’re losing opportunities.
+
+Update button text to:
+Book Your Call
+
+Make sure:
+- Form spacing is clean
+- Fields are easy to tap on mobile
+- No crowding between inputs
+
+---
+
+8. MOBILE OPTIMIZATION (CRITICAL)
+
+Fix the following across the entire site:
+
+- Consistent padding on all sections  
+- Proper spacing between headings, text, and buttons  
+- No text overlap or merging  
+- Buttons full-width or easily clickable  
+- Bullet points clearly separated  
+- Sections not cramped together  
+
+The mobile version should feel clean, readable, and structured—not compressed.
+
+---
+
+9. FINAL CHECK BEFORE APPROVAL
+
+Before sending final version, confirm:
+
+- No spacing or formatting issues  
+- CTA buttons clearly visible in multiple sections  
+- Form works end-to-end  
+- Mobile layout is clean  
+- All text is consistent and readable
