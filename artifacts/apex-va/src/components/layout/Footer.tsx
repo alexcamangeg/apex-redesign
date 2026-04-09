@@ -54,7 +54,7 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               <li style={{ color: textMuted }}>apexva.business@gmail.com</li>
               <li style={{ color: textMuted }}>+1 (832) 303-2497</li>
-              <li className="mt-4" style={{ color: textMuted }}>San Francisco, CA<br />Working with clients worldwide.</li>
+              <li className="mt-4" style={{ color: textMuted }}>Working with clients worldwide.</li>
             </ul>
           </div>
         </div>
