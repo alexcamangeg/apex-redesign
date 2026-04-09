@@ -52,8 +52,8 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-xl mb-6" style={{ color: textHeading }}>Contact</h4>
             <ul className="flex flex-col gap-4">
-              <li style={{ color: textMuted }}>hello@apexvirtualassistance.com</li>
-              <li style={{ color: textMuted }}>+1 (555) 123-4567</li>
+              <li style={{ color: textMuted }}>apexva.business@gmail.com</li>
+              <li style={{ color: textMuted }}>+1 (832) 303-2497</li>
               <li className="mt-4" style={{ color: textMuted }}>San Francisco, CA<br />Working with clients worldwide.</li>
             </ul>
           </div>
