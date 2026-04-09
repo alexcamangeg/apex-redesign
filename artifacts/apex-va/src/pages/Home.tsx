@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { WhoWeWorkWith } from "@/components/sections/WhoWeWorkWith";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Services } from "@/components/sections/Services";
 import { MissionVision } from "@/components/sections/MissionVision";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { Contact } from "@/components/sections/Contact";
@@ -17,7 +16,6 @@ export default function Home() {
         <Hero />
         <WhoWeWorkWith />
         <HowItWorks />
-        <Services />
         <MissionVision />
         <MidCTA />
         <Contact />

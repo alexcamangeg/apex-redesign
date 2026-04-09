@@ -36,7 +36,7 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollToSection("services")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-services">Services</button>
+          <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-how-it-works">How It Works</button>
           <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-contact">Contact</button>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none px-6" data-testid="button-nav-book">
@@ -57,7 +57,7 @@ export function Navbar() {
       {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-6 flex flex-col gap-6 shadow-lg">
-          <button onClick={() => scrollToSection("services")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-services">Services</button>
+          <button onClick={() => scrollToSection("how-it-works")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-how-it-works">How It Works</button>
           <button onClick={() => scrollToSection("about")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-contact">Contact</button>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none w-full" data-testid="button-mobile-book">
