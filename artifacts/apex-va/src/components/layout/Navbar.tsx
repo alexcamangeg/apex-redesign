@@ -31,7 +31,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="font-serif text-2xl font-bold tracking-tight text-primary">Apex<span className="text-secondary">.</span></span>
+          <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-16 w-auto" style={{ mixBlendMode: "screen" }} />
         </Link>
 
         {/* Desktop Nav */}

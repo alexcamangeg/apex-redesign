@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-2">
-            <span className="font-serif text-3xl font-bold tracking-tight text-background mb-6 block">Apex<span className="text-secondary">.</span></span>
+            <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-20 w-auto mb-6" style={{ mixBlendMode: "screen" }} />
             <p className="text-primary-foreground/80 max-w-sm mb-8 text-lg">
               Premium virtual assistance for busy entrepreneurs, startups, and professionals who want to reclaim their time.
             </p>
