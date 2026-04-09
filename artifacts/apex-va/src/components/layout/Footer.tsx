@@ -1,12 +1,7 @@
-import { SiInstagram, SiFacebook } from "react-icons/si";
-import { Linkedin } from "lucide-react";
-
 const darkGreen = "#000000";
 const textMain = "#ffffff";
 const textMuted = "rgba(255,255,255,0.7)";
 const textHeading = "#ffffff";
-const accent = "hsl(142 72% 45%)";
-const socialBg = "rgba(255,255,255,0.08)";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,20 +19,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-2">
             <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-20 w-auto mb-6" style={{ mixBlendMode: "screen" }} />
-            <p className="max-w-sm mb-8 text-lg" style={{ color: textMuted }}>
+            <p className="max-w-sm text-lg" style={{ color: textMuted }}>
               Premium virtual assistance for busy entrepreneurs, startups, and professionals who want to reclaim their time.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="p-2 rounded-sm transition-colors" style={{ backgroundColor: socialBg, color: textMain }} data-testid="link-social-linkedin">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="p-2 rounded-sm transition-colors" style={{ backgroundColor: socialBg, color: textMain }} data-testid="link-social-instagram">
-                <SiInstagram size={20} />
-              </a>
-              <a href="#" className="p-2 rounded-sm transition-colors" style={{ backgroundColor: socialBg, color: textMain }} data-testid="link-social-facebook">
-                <SiFacebook size={20} />
-              </a>
-            </div>
           </div>
 
           <div>
