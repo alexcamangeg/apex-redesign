@@ -1,0 +1,136 @@
+Here is the direction for the website update. The goal is to make the site more conversion-focused, clearer, and more aligned with our actual business model.
+
+Overall Goal
+We are not trying to build a site that just looks good. We are building a site that clearly communicates what we do, who we help, and gets visitors to book a call.
+
+Main Offer Focus
+The site should focus on:
+- Lead generation systems
+- High-converting websites
+- Business support through virtual assistants
+
+Do not make the site feel too broad or cluttered. Keep the message centered around helping businesses generate more leads and operate more efficiently.
+
+Do Not Add Yet
+- Do not add credit services as a main offer right now
+- Do not make the site look like we do everything for everyone
+- Do not overdesign it
+
+Target Industries
+Please make the site feel relevant for:
+- Car sales professionals
+- Roofing companies
+- Med spas
+- Dental practices
+
+Homepage Direction
+
+1. Hero Section
+Please rewrite and structure the hero section so it clearly communicates:
+- who we help
+- what result we provide
+- what action they should take
+
+Use this copy direction:
+
+Headline:
+We Help Local Businesses Generate More Leads Consistently
+
+Subheadline:
+Through high-converting websites and outbound systems designed to bring in real opportunities, not just traffic.
+
+Primary CTA Button:
+Book a Call
+
+Secondary CTA Button:
+Learn More
+
+2. Who We Work With Section
+Add a section that clearly says who the service is for.
+
+Use this copy:
+
+Who We Work With
+
+We work with service-based businesses that depend on consistent lead flow to grow.
+
+- Car Sales Professionals
+- Roofing Companies
+- Med Spas
+- Dental Practices
+
+3. How It Works Section
+Add a simple 3-step section.
+
+Use this copy:
+
+How It Works
+
+1. We identify your growth gaps
+We look at your current website, follow-up process, and lead flow.
+
+2. We build your system
+We create a cleaner, more conversion-focused website and support structure.
+
+3. We help you generate opportunities
+Our goal is to help you create a more consistent flow of qualified leads.
+
+4. Mission Section
+Add this mission statement to the site:
+
+Our mission is to help businesses generate more opportunities, operate more efficiently, and scale with confidence by combining strategic outbound systems, optimized websites, and performance-driven support teams.
+
+5. Vision Section
+Add this vision statement to the site:
+
+We build systems that give businesses control over their growth. Apex Agency exists to eliminate inconsistency in lead generation, operations, and execution by providing scalable solutions powered by skilled virtual assistants and high-converting digital infrastructure.
+
+6. CTA Sections
+Please add clear call-to-action sections throughout the page, not just once.
+
+Minimum:
+- one in the hero section
+- one in the middle of the page
+- one near the bottom
+
+Use CTA wording like:
+- Book a Call
+- Get Started
+- Let’s Build Your System
+
+7. Design Direction
+Please keep the design:
+- clean
+- modern
+- simple
+- professional
+- conversion-focused
+
+Important:
+- improve spacing and visual hierarchy
+- keep fonts, colors, and buttons consistent
+- make sure the mobile experience is clean
+- make sure the backend is structured cleanly for future edits and scaling
+
+8. Website Structure Priorities
+Please make sure the homepage clearly answers:
+- What do we do?
+- Who is it for?
+- Why does it matter?
+- What should they do next?
+
+9. Technical Priorities
+Please also review:
+- mobile responsiveness
+- button and link functionality
+- contact form functionality
+- page clarity and loading experience
+
+10. Final Goal
+The final site should feel like:
+- clear
+- focused
+- business-driven
+- built to convert
+
+It should not feel generic or like a portfolio. It should feel like a business that helps companies get more leads and improve operations.
