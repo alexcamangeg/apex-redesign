@@ -1,12 +1,13 @@
 import { Router } from "express";
 import pg from "pg";
+import { requireAuth } from "../lib/adminAuth.js";
 
 const router = Router();
 const { Pool } = pg;
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
-router.get("/submissions", async (_req, res) => {
+router.get("/submissions", requireAuth, async (_req, res) => {
   try {
     const result = await pool.query(
       `SELECT id, name, email, phone, message, submitted_at
