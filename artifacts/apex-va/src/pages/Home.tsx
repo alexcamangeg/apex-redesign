@@ -5,7 +5,6 @@ import { Services } from "@/components/sections/Services";
 import { MidCTA } from "@/components/sections/MidCTA";
 import { Contact } from "@/components/sections/Contact";
 import { motion } from "framer-motion";
-import { LifestyleIllustration } from "@/components/vectors/LifestyleIllustration";
 
 export default function Home() {
   return (
@@ -43,9 +42,11 @@ export default function Home() {
                 className="relative"
               >
                 <div className="absolute inset-0 bg-secondary/20 translate-x-4 translate-y-4 rounded-sm" />
-                <div className="relative z-10 w-full rounded-sm shadow-lg overflow-hidden">
-                  <LifestyleIllustration />
-                </div>
+                <img
+                  src="/images/lifestyle.png"
+                  alt="Relaxed entrepreneur enjoying coffee"
+                  className="relative z-10 w-full h-auto object-cover rounded-sm shadow-lg"
+                />
               </motion.div>
 
               <motion.div

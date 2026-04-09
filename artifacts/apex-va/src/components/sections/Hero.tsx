@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { HeroIllustration } from "@/components/vectors/HeroIllustration";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -69,9 +68,11 @@ export function Hero() {
             className="relative lg:h-[700px] w-full"
           >
             <div className="absolute inset-0 bg-primary/10 -rotate-3 rounded-sm scale-105" />
-            <div className="relative z-10 w-full h-full rounded-sm shadow-2xl overflow-hidden">
-              <HeroIllustration />
-            </div>
+            <img
+              src="/images/hero.png"
+              alt="Professional woman working at a modern desk"
+              className="relative z-10 w-full h-full object-cover rounded-sm shadow-2xl"
+            />
             
             {/* Floating Trust Card */}
             <motion.div 
