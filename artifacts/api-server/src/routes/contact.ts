@@ -1,5 +1,5 @@
 import { Router } from "express";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import pg from "pg";
 
 const router = Router();
@@ -7,16 +7,10 @@ const { Pool } = pg;
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
-function createTransporter() {
-  const pass = process.env.GMAIL_APP_PASSWORD;
-  if (!pass) return null;
-  return nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "apexva.business@gmail.com",
-      pass,
-    },
-  });
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return null;
+  return new Resend(key);
 }
 
 router.post("/contact", async (req, res) => {
@@ -33,49 +27,51 @@ router.post("/contact", async (req, res) => {
       [name, businessName, email, phone || null, serviceNeeded, message]
     );
 
-    const transporter = createTransporter();
-    if (transporter) {
-      try { await transporter.sendMail({
-        from: '"Apex Agency Website" <apexva.business@gmail.com>',
-        to: "apexva.business@gmail.com",
-        subject: `New Inquiry from ${name} — ${businessName}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h2 style="color: #22c55e; border-bottom: 2px solid #22c55e; padding-bottom: 10px;">
-              New Contact Form Submission
-            </h2>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; width: 140px; color: #555;">Full Name:</td>
-                <td style="padding: 10px 0;">${name}</td>
-              </tr>
-              <tr style="background: #f9f9f9;">
-                <td style="padding: 10px 0; font-weight: bold; color: #555;">Business Name:</td>
-                <td style="padding: 10px 0;">${businessName}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #555;">Email:</td>
-                <td style="padding: 10px 0;"><a href="mailto:${email}">${email}</a></td>
-              </tr>
-              <tr style="background: #f9f9f9;">
-                <td style="padding: 10px 0; font-weight: bold; color: #555;">Phone:</td>
-                <td style="padding: 10px 0;">${phone || "Not provided"}</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #555;">Service Needed:</td>
-                <td style="padding: 10px 0;">${serviceNeeded}</td>
-              </tr>
-              <tr style="background: #f9f9f9;">
-                <td style="padding: 10px 0; font-weight: bold; color: #555; vertical-align: top;">Message:</td>
-                <td style="padding: 10px 0;">${message.replace(/\n/g, "<br>")}</td>
-              </tr>
-            </table>
-            <p style="margin-top: 20px; color: #888; font-size: 12px;">
-              Submitted on ${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })}
-            </p>
-          </div>
-        `,
-      }); } catch (emailErr) {
+    const resend = getResend();
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: "Apex Agency <onboarding@resend.dev>",
+          to: ["apexva.business@gmail.com"],
+          subject: `New Inquiry from ${name} — ${businessName}`,
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+              <h2 style="color: #22c55e; border-bottom: 2px solid #22c55e; padding-bottom: 10px;">
+                New Contact Form Submission
+              </h2>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 10px 0; font-weight: bold; width: 140px; color: #555;">Full Name:</td>
+                  <td style="padding: 10px 0;">${name}</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="padding: 10px 0; font-weight: bold; color: #555;">Business Name:</td>
+                  <td style="padding: 10px 0;">${businessName}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px 0; font-weight: bold; color: #555;">Email:</td>
+                  <td style="padding: 10px 0;"><a href="mailto:${email}">${email}</a></td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="padding: 10px 0; font-weight: bold; color: #555;">Phone:</td>
+                  <td style="padding: 10px 0;">${phone || "Not provided"}</td>
+                </tr>
+                <tr>
+                  <td style="padding: 10px 0; font-weight: bold; color: #555;">Service Needed:</td>
+                  <td style="padding: 10px 0;">${serviceNeeded}</td>
+                </tr>
+                <tr style="background: #f9f9f9;">
+                  <td style="padding: 10px 0; font-weight: bold; color: #555; vertical-align: top;">Message:</td>
+                  <td style="padding: 10px 0;">${message.replace(/\n/g, "<br>")}</td>
+                </tr>
+              </table>
+              <p style="margin-top: 20px; color: #888; font-size: 12px;">
+                Submitted on ${new Date().toLocaleString("en-US", { timeZone: "America/Chicago" })}
+              </p>
+            </div>
+          `,
+        });
+      } catch (emailErr) {
         console.error("Email send error (submission still saved):", emailErr);
       }
     }
