@@ -44,7 +44,7 @@ export function WhoWeWorkWith() {
             Built for service businesses that depend on consistent lead flow.
           </h3>
           <p className="text-lg text-muted-foreground">
-            We work with service-based businesses that depend on consistent lead flow to grow.
+            We work with service-based businesses that rely on predictable lead generation—not inconsistent marketing.
           </p>
         </div>
 

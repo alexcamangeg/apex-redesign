@@ -30,16 +30,16 @@ export function Hero() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.1] mb-8">
-              We Help Local Businesses{" "}
-              <span className="text-primary italic">Generate More Leads</span>{" "}
+              We Help Service-Based Businesses{" "}
+              <span className="text-primary italic">Generate More Qualified Leads</span>{" "}
               Consistently
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-              Through high-converting websites and outbound systems designed to bring in real opportunities, not just traffic.
+              Through high-converting websites and outbound systems designed to bring real opportunities—not just traffic.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Button
                 size="lg"
                 className="rounded-none h-14 px-8 text-base group"
@@ -59,6 +59,10 @@ export function Hero() {
                 Learn More
               </Button>
             </div>
+
+            <p className="text-sm text-muted-foreground border-l-2 border-primary/40 pl-4 italic">
+              Built for businesses that rely on consistent lead flow—not guesswork.
+            </p>
           </motion.div>
 
           <motion.div
@@ -73,27 +77,6 @@ export function Hero() {
               alt="Virtual assistants working at computers in a modern office"
               className="relative z-10 w-full h-full object-cover rounded-sm shadow-2xl"
             />
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-8 -left-8 md:-left-16 bg-card p-6 shadow-xl z-20 border border-border max-w-xs"
-            >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-muted border-2 border-card overflow-hidden">
-                      <div className="w-full h-full bg-primary/20 flex items-center justify-center text-xs font-medium text-primary">
-                        {String.fromCharCode(64 + i)}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="text-sm font-medium text-foreground">Trusted by 50+ businesses</div>
-              </div>
-              <p className="text-xs text-muted-foreground">Helping local businesses generate consistent, qualified leads.</p>
-            </motion.div>
           </motion.div>
 
         </div>

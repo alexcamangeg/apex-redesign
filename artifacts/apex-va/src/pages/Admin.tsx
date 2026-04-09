@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input";
 interface Submission {
   id: number;
   name: string;
+  business_name: string | null;
   email: string;
   phone: string | null;
+  service_needed: string | null;
   message: string;
   submitted_at: string;
 }
@@ -77,6 +79,7 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
               placeholder="admin"
               required
               autoFocus
+              autoComplete="username"
             />
           </div>
           <div>
@@ -88,6 +91,7 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
               className="rounded-none border-border bg-background focus-visible:ring-primary"
               placeholder="••••••••"
               required
+              autoComplete="current-password"
             />
           </div>
           {error && <p className="text-sm text-red-500">{error}</p>}
@@ -221,6 +225,9 @@ export default function Admin() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                     <div>
                       <h3 className="text-lg font-serif font-semibold text-foreground">{s.name}</h3>
+                      {s.business_name && (
+                        <p className="text-sm text-foreground/70 mt-0.5">{s.business_name}</p>
+                      )}
                       <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1">
                         <a href={`mailto:${s.email}`} className="text-primary text-sm hover:underline">
                           {s.email}
@@ -231,6 +238,11 @@ export default function Admin() {
                           </a>
                         )}
                       </div>
+                      {s.service_needed && (
+                        <span className="inline-block mt-2 text-xs bg-primary/10 text-primary px-2 py-1 border border-primary/20">
+                          {s.service_needed}
+                        </span>
+                      )}
                     </div>
                     <span className="text-xs text-muted-foreground whitespace-nowrap">
                       {new Date(s.submitted_at).toLocaleDateString("en-US", {

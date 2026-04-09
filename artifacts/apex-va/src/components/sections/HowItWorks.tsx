@@ -37,7 +37,7 @@ export function HowItWorks() {
             A clear process. A predictable result.
           </h3>
           <p className="text-lg text-muted-foreground">
-            We don't guess — we follow a proven system that identifies gaps, builds infrastructure, and drives consistent results.
+            A simple system designed to identify gaps, build structure, and generate consistent opportunities.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export function HowItWorks() {
             onClick={() => scrollToSection("contact")}
             data-testid="button-how-it-works-cta"
           >
-            Let's Build Your System
+            Book a Call
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

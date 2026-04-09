@@ -18,9 +18,11 @@ import { CheckCircle2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
+  businessName: z.string().min(2, "Business name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().optional(),
-  message: z.string().min(10, "Please tell us a bit about your needs")
+  serviceNeeded: z.string().min(2, "Please tell us which service you need"),
+  message: z.string().min(10, "Please tell us a bit more about your business")
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -34,8 +36,10 @@ export function Contact() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      businessName: "",
       email: "",
       phone: "",
+      serviceNeeded: "",
       message: ""
     }
   });
@@ -73,8 +77,11 @@ export function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Let's discuss your specific needs.</h2>
-            <p className="text-lg text-muted-foreground mb-12 max-w-md">
-              Fill out the form below to schedule your complimentary discovery call. We'll respond within 24 hours to find a time that works for you.
+            <p className="text-lg text-muted-foreground mb-4 max-w-md">
+              Tell us about your business and we'll show you where you're losing opportunities.
+            </p>
+            <p className="text-base text-muted-foreground mb-12 max-w-md">
+              Fill out the form to book your call. We'll respond within 24 hours to find a time that works for you.
             </p>
             
             <div className="space-y-8">
@@ -138,20 +145,35 @@ export function Contact() {
             ) : (
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-foreground">Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Jane Doe" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground">Full Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Jane Doe" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-name" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="businessName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-foreground">Business Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Acme Roofing Co." className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-business-name" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -166,7 +188,6 @@ export function Contact() {
                         </FormItem>
                       )}
                     />
-                    
                     <FormField
                       control={form.control}
                       name="phone"
@@ -184,13 +205,27 @@ export function Contact() {
 
                   <FormField
                     control={form.control}
+                    name="serviceNeeded"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-foreground">Service Needed</FormLabel>
+                        <FormControl>
+                          <Input placeholder="e.g. Lead Generation, Website, VA Support" className="rounded-none border-border bg-background focus-visible:ring-primary" {...field} data-testid="input-service-needed" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground">How can we help you?</FormLabel>
+                        <FormLabel className="text-foreground">Tell us about your business</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Tell us a bit about your business and where you need support..." 
+                            placeholder="Describe your current situation and where you need support..." 
                             className="rounded-none border-border bg-background min-h-[120px] focus-visible:ring-primary resize-y" 
                             {...field} 
                             data-testid="input-message"
@@ -205,7 +240,7 @@ export function Contact() {
                     <p className="text-sm text-red-500 text-center">{submitError}</p>
                   )}
                   <Button type="submit" disabled={isSubmitting} className="w-full rounded-none h-12 text-base" data-testid="button-submit-form">
-                    {isSubmitting ? "Sending..." : "Request a Discovery Call"}
+                    {isSubmitting ? "Sending..." : "Book Your Call"}
                   </Button>
                 </form>
               </Form>
