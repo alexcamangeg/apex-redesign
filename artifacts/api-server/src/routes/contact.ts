@@ -35,7 +35,7 @@ router.post("/contact", async (req, res) => {
 
     const transporter = createTransporter();
     if (transporter) {
-      await transporter.sendMail({
+      try { await transporter.sendMail({
         from: '"Apex Agency Website" <apexva.business@gmail.com>',
         to: "apexva.business@gmail.com",
         subject: `New Inquiry from ${name} — ${businessName}`,
@@ -75,7 +75,9 @@ router.post("/contact", async (req, res) => {
             </p>
           </div>
         `,
-      });
+      }); } catch (emailErr) {
+        console.error("Email send error (submission still saved):", emailErr);
+      }
     }
 
     return res.status(200).json({ success: true });
