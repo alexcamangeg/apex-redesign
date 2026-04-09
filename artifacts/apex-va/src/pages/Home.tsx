@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { WhoWeWorkWith } from "@/components/sections/WhoWeWorkWith";
+import { Services } from "@/components/sections/Services";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { MissionVision } from "@/components/sections/MissionVision";
 import { MidCTA } from "@/components/sections/MidCTA";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <WhoWeWorkWith />
+        <Services />
         <HowItWorks />
         <MissionVision />
         <MidCTA />
