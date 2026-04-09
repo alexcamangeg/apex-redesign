@@ -27,6 +27,8 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -38,9 +40,25 @@ export function Contact() {
     }
   });
 
-  function onSubmit(data: FormValues) {
-    console.log("Form submitted:", data);
-    setIsSubmitted(true);
+  async function onSubmit(data: FormValues) {
+    setIsSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || "Something went wrong. Please try again.");
+      }
+      setIsSubmitted(true);
+    } catch (err: any) {
+      setSubmitError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -183,8 +201,11 @@ export function Contact() {
                     )}
                   />
                   
-                  <Button type="submit" className="w-full rounded-none h-12 text-base" data-testid="button-submit-form">
-                    Request a Discovery Call
+                  {submitError && (
+                    <p className="text-sm text-red-500 text-center">{submitError}</p>
+                  )}
+                  <Button type="submit" disabled={isSubmitting} className="w-full rounded-none h-12 text-base" data-testid="button-submit-form">
+                    {isSubmitting ? "Sending..." : "Request a Discovery Call"}
                   </Button>
                 </form>
               </Form>
