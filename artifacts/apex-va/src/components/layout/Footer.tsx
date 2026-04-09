@@ -1,12 +1,12 @@
 import { SiInstagram, SiFacebook } from "react-icons/si";
 import { Linkedin } from "lucide-react";
 
-const darkGreen = "hsl(142 60% 12%)";
-const textMain = "hsl(142 30% 90%)";
-const textMuted = "hsl(142 20% 65%)";
-const textHeading = "hsl(142 40% 95%)";
+const darkGreen = "#000000";
+const textMain = "#ffffff";
+const textMuted = "rgba(255,255,255,0.7)";
+const textHeading = "#ffffff";
 const accent = "hsl(142 72% 45%)";
-const socialBg = "hsl(142 60% 18%)";
+const socialBg = "rgba(255,255,255,0.08)";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -59,7 +59,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderTop: `1px solid hsl(142 40% 22%)` }}>
+        <div className="mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderTop: `1px solid rgba(255,255,255,0.15)` }}>
           <p className="text-sm" style={{ color: textMuted }}>
             &copy; {currentYear} Apex Virtual Assistance. All rights reserved.
           </p>
