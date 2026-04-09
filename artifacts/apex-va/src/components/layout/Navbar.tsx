@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Lock } from "lucide-react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const isHome = location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,10 @@ export function Navbar() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (!isHome) {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -40,6 +46,7 @@ export function Navbar() {
           <button onClick={() => scrollToSection("how-it-works")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-how-it-works">How It Works</button>
           <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-contact">Contact</button>
+          <Link href="/careers" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-careers">Careers</Link>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none px-6" data-testid="button-nav-book">
             Book a Call
           </Button>
@@ -49,7 +56,7 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-foreground p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           data-testid="button-mobile-menu"
@@ -65,6 +72,7 @@ export function Navbar() {
           <button onClick={() => scrollToSection("how-it-works")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-how-it-works">How It Works</button>
           <button onClick={() => scrollToSection("about")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-contact">Contact</button>
+          <Link href="/careers" onClick={() => setMobileMenuOpen(false)} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-careers">Careers</Link>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none w-full" data-testid="button-mobile-book">
             Book a Discovery Call
           </Button>
