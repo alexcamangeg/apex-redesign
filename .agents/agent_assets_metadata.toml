@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "PF-Z5lCZ5qwiZzogjtrUq"
+uri = "file://artifacts/apex-va/public/images/hero.png"
+type = "image"
+title = "Professional woman at modern desk"
+
+[[generated]]
+id = "HbDhMJH75ffHuIkvSxNYM"
+uri = "file://artifacts/apex-va/public/images/collaboration.png"
+type = "image"
+title = "Abstract professional collaboration"
+
+[[generated]]
+id = "TxbZ6dbBZI2YykQlKvSMK"
+uri = "file://artifacts/apex-va/public/images/lifestyle.png"
+type = "image"
+title = "Relaxed professional with coffee"
