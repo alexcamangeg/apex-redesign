@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Lock } from "lucide-react";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,6 +42,9 @@ export function Navbar() {
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none px-6" data-testid="button-nav-book">
             Book a Call
           </Button>
+          <Link href="/admin" title="Admin" className="text-foreground/30 hover:text-foreground/60 transition-colors">
+            <Lock size={15} />
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -63,6 +66,9 @@ export function Navbar() {
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none w-full" data-testid="button-mobile-book">
             Book a Discovery Call
           </Button>
+          <Link href="/admin" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 text-sm text-foreground/40 hover:text-foreground/60 transition-colors">
+            <Lock size={14} /> Admin
+          </Link>
         </div>
       )}
     </header>
