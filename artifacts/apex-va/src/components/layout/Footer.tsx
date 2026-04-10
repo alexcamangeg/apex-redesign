@@ -1,3 +1,5 @@
+import { useLocation } from "wouter";
+
 const darkGreen = "#000000";
 const textMain = "#ffffff";
 const textMuted = "rgba(255,255,255,0.7)";
@@ -5,8 +7,15 @@ const textHeading = "#ffffff";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [location, navigate] = useLocation();
+  const isHome = location === "/";
 
   const scrollToSection = (id: string) => {
+    if (!isHome) {
+      sessionStorage.setItem("apex_scroll_target", id);
+      navigate("/");
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
