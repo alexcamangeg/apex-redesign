@@ -18,7 +18,7 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div className="md:col-span-2">
-            <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-20 w-auto mb-6" style={{ mixBlendMode: "screen" }} />
+            <img src="/images/logo.jpeg" alt="Apex Virtual Assistance" className="h-20 w-auto mb-6" style={{ mixBlendMode: "screen" }} loading="lazy" decoding="async" />
             <p className="max-w-sm text-lg" style={{ color: textMuted }}>
               Lead generation systems, high-converting websites, and performance-driven support for service businesses.
             </p>

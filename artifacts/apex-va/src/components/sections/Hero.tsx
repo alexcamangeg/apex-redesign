@@ -12,16 +12,15 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center pt-28 pb-16 overflow-hidden bg-background">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/8 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-primary/5 border border-primary/10 mb-8 max-w-full overflow-hidden">
               <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
@@ -65,9 +64,9 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="relative h-[280px] sm:h-[380px] lg:h-[700px] w-full"
           >
             <div className="absolute inset-0 bg-primary/10 -rotate-3 rounded-sm scale-105" />
