@@ -30,10 +30,11 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const whoWeAreLooking = [
+const whatWeExpect = [
   "Strong communication skills",
   "Reliable and consistent work ethic",
   "Ability to follow systems and instructions",
+  "Ability to work independently and stay accountable",
   "Experience in outbound calling, lead management, or admin work is a plus",
 ];
 
@@ -104,8 +105,11 @@ export default function Careers() {
             <h1 className="text-4xl md:text-6xl font-serif text-foreground leading-tight mb-6">
               Work With Apex Agency
             </h1>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              We're building a performance-driven team of virtual assistants focused on execution, consistency, and results.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-4">
+              We're building a high-performance team of virtual assistants focused on execution, consistency, and results.
+            </p>
+            <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl">
+              This role is for individuals who take ownership, follow systems, and operate with consistency.
             </p>
           </motion.div>
 
@@ -120,9 +124,9 @@ export default function Careers() {
             >
               {/* Who We're Looking For */}
               <div>
-                <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6">Who We're Looking For</h3>
+                <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6">What We Expect</h3>
                 <ul className="flex flex-col gap-4">
-                  {whoWeAreLooking.map((item, i) => (
+                  {whatWeExpect.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground text-base leading-relaxed">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span>{item}</span>
@@ -134,7 +138,7 @@ export default function Careers() {
               {/* What You'll Do */}
               <div>
                 <h3 className="text-xl md:text-2xl font-serif text-foreground mb-6">What You'll Do</h3>
-                <ul className="flex flex-col gap-4">
+                <ul className="flex flex-col gap-4 mb-5">
                   {whatYoullDo.map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground text-base leading-relaxed">
                       <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -142,6 +146,9 @@ export default function Careers() {
                     </li>
                   ))}
                 </ul>
+                <p className="text-sm text-foreground/60 italic">
+                  Performance is measured by activity, consistency, and results.
+                </p>
               </div>
             </motion.div>
 
@@ -152,7 +159,10 @@ export default function Careers() {
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="bg-card border border-border p-6 md:p-10 shadow-xl">
-                <h3 className="text-xl md:text-2xl font-serif text-foreground mb-8">How to Apply</h3>
+                <h3 className="text-xl md:text-2xl font-serif text-foreground mb-3">How to Apply</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+                  Complete the application below. We review all submissions and will reach out to qualified candidates.
+                </p>
 
                 {isSubmitted ? (
                   <div className="flex flex-col items-center text-center py-12 animate-in fade-in zoom-in duration-500">
