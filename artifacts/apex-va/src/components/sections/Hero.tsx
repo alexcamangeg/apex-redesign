@@ -72,9 +72,11 @@ export function Hero() {
           >
             <div className="absolute inset-0 bg-primary/10 -rotate-3 rounded-sm scale-105" />
             <img
-              src="/images/hero.png"
+              src="/images/hero.webp"
               alt="Virtual assistants working at computers in a modern office"
               className="relative z-10 w-full h-full object-cover rounded-sm shadow-2xl"
+              fetchPriority="high"
+              decoding="async"
             />
           </motion.div>
 
