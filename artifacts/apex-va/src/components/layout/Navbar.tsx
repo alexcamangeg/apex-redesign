@@ -36,7 +36,7 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2" onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}>
           <img src="/images/logo.jpeg" alt="Apex Agency" className="h-14 md:h-20 w-auto" style={{ mixBlendMode: "screen" }} />
         </Link>
 
