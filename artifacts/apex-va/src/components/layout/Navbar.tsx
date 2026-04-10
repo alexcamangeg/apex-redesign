@@ -6,7 +6,7 @@ import { Menu, X, Lock } from "lucide-react";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
   const isHome = location === "/";
 
   useEffect(() => {
@@ -18,15 +18,16 @@ export function Navbar() {
   }, []);
 
   const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false);
     if (!isHome) {
-      window.location.href = `/#${id}`;
+      sessionStorage.setItem("apex_scroll_target", id);
+      navigate("/");
       return;
     }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setMobileMenuOpen(false);
   };
 
   return (
