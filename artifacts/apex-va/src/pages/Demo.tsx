@@ -10,7 +10,7 @@ import {
   Globe,
   Headphones,
   Check,
-  Play,
+  PhoneCall,
 } from "lucide-react";
 
 const demoSteps = [
@@ -78,13 +78,6 @@ const itemVariants = {
 };
 
 export default function Demo() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
@@ -263,7 +256,7 @@ export default function Demo() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="bg-primary text-primary-foreground p-10 md:p-16">
-              <Play className="w-10 h-10 mx-auto mb-6 opacity-80" />
+              <PhoneCall className="w-10 h-10 mx-auto mb-6 opacity-80" />
               <h3 className="text-3xl md:text-4xl font-serif mb-4">
                 Ready to see it in action?
               </h3>
