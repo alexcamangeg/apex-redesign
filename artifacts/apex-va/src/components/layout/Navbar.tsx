@@ -50,6 +50,7 @@ export function Navbar() {
           <button onClick={() => scrollToSection("about")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-contact">Contact</button>
           <Link href="/careers" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-careers">Careers</Link>
+          <Link href="/demo" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors" data-testid="link-demo">Demo</Link>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none px-6" data-testid="button-nav-book">
             Book a Call
           </Button>
@@ -76,6 +77,7 @@ export function Navbar() {
           <button onClick={() => scrollToSection("about")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-about">About</button>
           <button onClick={() => scrollToSection("contact")} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-contact">Contact</button>
           <Link href="/careers" onClick={() => setMobileMenuOpen(false)} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-careers">Careers</Link>
+          <Link href="/demo" onClick={() => setMobileMenuOpen(false)} className="text-left text-lg font-medium text-foreground" data-testid="link-mobile-demo">Demo</Link>
           <Button onClick={() => scrollToSection("contact")} variant="default" className="rounded-none w-full" data-testid="button-mobile-book">
             Book a Discovery Call
           </Button>

@@ -42,6 +42,7 @@ export function Footer() {
               <li><button onClick={() => scrollToSection("about")} className="transition-colors" style={{ color: textMuted }} data-testid="footer-link-about">About Us</button></li>
               <li><button onClick={() => scrollToSection("contact")} className="transition-colors" style={{ color: textMuted }} data-testid="footer-link-contact">Contact</button></li>
               <li><a href="/careers" className="transition-colors" style={{ color: textMuted }} data-testid="footer-link-careers">Careers</a></li>
+              <li><a href="/demo" className="transition-colors" style={{ color: textMuted }} data-testid="footer-link-demo">Demo</a></li>
             </ul>
           </div>
 
